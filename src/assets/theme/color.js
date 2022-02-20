@@ -1,7 +1,9 @@
 export default {
-  primary: "#4B30B4",
+  primary: "#7B4CE0",
   secondary: "#FFFFFF",
   background: "#000000",
+  disabled: "#5D6164",
+  danger: "#F72585",
   button: {
     background: "#4896EF",
     text: "#007FFF",
@@ -10,6 +12,7 @@ export default {
   },
   text: {
     primary: "#FFFFFF",
-    secondary: "#5D6164",
+    secondary: "#7B4CE0",
+    black: "#333333",
   },
 };

@@ -6,7 +6,7 @@ import Carousel, { Pagination } from "react-native-snap-carousel";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import styles from "./styles";
-import CustomFloatingButton from "../common/CustomButton";
+import { CustomFloatingButton } from "../common/CustomButton";
 import features from "../../utils/features";
 import { LOGIN } from "../../constants/routeNames";
 import color from "../../assets/theme/color";
