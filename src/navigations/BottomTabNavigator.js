@@ -26,7 +26,6 @@ const BottomTabNavigator = () => {
         name={HOME}
         component={Home}
         options={{
-          header: () => <HomeHeaderComponent />,
           tabBarIcon: ({ focused }) => (
             <Entypo
               name="home"

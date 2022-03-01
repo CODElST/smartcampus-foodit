@@ -1,14 +1,23 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import {
+  API_KEY,
+  AUTH_DOMAIN,
+  PROJECT_ID,
+  STORAGE_BUCKET,
+  MESSAGING_SENDER_ID,
+  APP_ID,
+  MEASUREMENT_ID,
+} from "@env";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTSG4EcrWQvPKND38guQBBEp8Hcdj6oV4",
-  authDomain: "smartcampus-foodit-dc2b9.firebaseapp.com",
-  projectId: "smartcampus-foodit-dc2b9",
-  storageBucket: "smartcampus-foodit-dc2b9.appspot.com",
-  messagingSenderId: "12725829308",
-  appId: "1:12725829308:web:58e6c5a9ad211b5d201ab9",
-  measurementId: "G-HV5969P0FP",
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID,
+  measurementId: MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);

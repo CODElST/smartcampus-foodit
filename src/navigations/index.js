@@ -10,7 +10,7 @@ import AppLoadingScreen from "../screens/AppLoadingScreen";
 
 const MainNavigator = () => {
   const [isLoading, setIsLoading] = React.useState(true);
-  const [authenticated, setAuthenticated] = React.useState(true);
+  const [authenticated, setAuthenticated] = React.useState(false);
 
   React.useEffect(async () => {
     getFonts().then((res) => setIsLoading(false));

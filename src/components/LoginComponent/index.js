@@ -13,6 +13,7 @@ import Input from "../common/Input";
 import color from "../../assets/theme/color";
 import reg from "../../utils/emailRegExp";
 import { REGISTER } from "../../constants/routeNames";
+import { signInWithGoogle } from "../../firebase/GoogleAuth";
 
 const Index = () => {
   const [visible, setVisible] = React.useState(false);
@@ -23,15 +24,16 @@ const Index = () => {
 
   const { navigate } = useNavigation();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (email && reg.test(email)) {
       setEmailError(null);
       if (password) {
         setPasswordError(null);
-        navigate(OTP_VERIFY, {
-          phoneCode: "+" + phoneCode,
-          phoneNumber: phoneNumber,
-        });
+        await signInWithGoogle();
+        // navigate(OTP_VERIFY, {
+        //   phoneCode: "+" + phoneCode,
+        //   phoneNumber: phoneNumber,
+        // });
       } else {
         setPasswordError("Invalid Password");
       }
@@ -95,7 +97,7 @@ const Index = () => {
         <CustomButton
           secondary
           title="Sign in with Google"
-          onPress={() => console.log("Google auth")}
+          onPress={async () => await signInWithGoogle()}
           icon={
             <AntDesign
               name="google"

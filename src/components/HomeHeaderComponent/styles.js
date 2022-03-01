@@ -3,11 +3,30 @@ import color from "../../assets/theme/color";
 
 export default ScaledSheet.create({
   wrapper: {
-    // backgroundColor: color.background,
+    padding: 8,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: 60,
   },
 
-  logo: {
-    width: "130@s",
-    height: "150@s",
+  icon: {
+    backgroundColor: color.disabled,
+    padding: 8,
+    borderRadius: 9999,
+  },
+
+  location: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  avatar: {
+    height: 40,
+    width: 40,
+    borderRadius: 9999,
   },
 });
